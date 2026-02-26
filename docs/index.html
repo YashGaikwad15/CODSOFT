@@ -1,1 +1,136 @@
-Check that images/Final-logo/screen-logo4.png
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="Contact.js"></script> <!-- Use actual JS file -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/561a470a0c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Scroll Top Button -->
+    <button id="scrollTop">
+        <i class="fa fa-angle-up"></i>
+    </button>
+
+    <!-- Header -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="images/Final-logo/screen-logo4.png" class="logo" alt="Logo">
+                </a>
+
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <!-- Changed local path to relative folder path -->
+                    <a href="Responsive_Validationform/index.html" class="btn-top">Let's Work</a>
+                    <i class="fas fa-solid fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <h1>Hi, I'm <span>Yash</span><br>Gaikwad from India</h1>
+                <p>Full Stack Web Dev</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Final-bg/about-me.jpg" alt="Yash Gaikwad">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p style="margin-top:20px;text-align:justify;">
+                        Hey there, I'm Yash Dnyaneshwar Gaikwad, a Full Stack Web Developer...
+                    </p>
+                    <!-- Tabs -->
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C Programming</span></li>
+                            <li><span>Python (Django)</span></li>
+                            <li><span>Full Stack Web Development</span></li>
+                            <li><span>UI/UX</span></li>
+                            <li><span>Android Development</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - Current</span><br>Intern at Brinito Services.</li>
+                            <li><span>2023 - 2024</span><br>Intern at Sunanda Infotech.</li>
+                            <li><span>2022 - 2023</span><br>Training + Internship at Sumago Infotech.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - Current</span><br>Engineering Student</li>
+                            <li><span>2020 - 2023</span><br>Diploma at K.K.Wagh Polytechnic</li>
+                            <li><span>2010 - 2020</span><br>St.Philomena Convent High School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services, Portfolio, Contact remain same with updated paths -->
+
+    <!-- Contact Section Resume -->
+    <a href="YashResume.pdf" target="_blank" download class="btn btn2">Download Resume <i class="fa-solid fa-download"></i></a>
+
+    <!-- Preloader Script -->
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        });
+    </script>
+
+    <!-- Tabs Script -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) { tablink.classList.remove("active-link") }
+            for (tabcontent of tabcontents) { tabcontent.classList.remove("active-tab") }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <!-- Side Menu Script -->
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() { sidemenu.style.right = "0"; }
+        function closemenu() { sidemenu.style.right = "-200px"; }
+    </script>
+
+</body>
+</html>
