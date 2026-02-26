@@ -1,10 +1,317 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/561a470a0c.js" crossorigin="anonymous"></script>
 </head>
+
+<!----------------Preloader------------->
+<div id="preloader"></div>
+
 <body>
-  <h1>Portfolio Setup Successful</h1>
-  <p>Folder created correctly.</p>
+    <button id="scrollTop">
+        <i class="fa fa-angle-up"></i>
+    </button>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="images/Final-logo/screen-logo4.png" class="logo">
+                </a>
+
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <a href="D:\My_Portfolio\Responsive_Validationform\index.html" class="btn-top" >Let's Work</a>
+                    <i class="fas fa-solid fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Yash</span><br>Gaikwad from India</h1>
+                <p>Full Stack Web Dev</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------About----------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Final-bg/about-me.jpg" alt="Yash Gaikwad">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p style="margin-top: 20px;text-align:justify">Hey there, I'm Yash Dnyaneshwar Gaikwad, a Full Stack
+                        Web Developer with a passion for various Computer Technologies. Over the years, I've gained
+                        valuable experience in Web Development journey. I thrive in dynamic
+                        environments where innovation and problem-solving are key, and I'm always exploring new trends
+                        and techniques in Computer Science. Outside of work, you'll often find me playing various
+                        Sports,
+                        Singing, or doing Adventures. I'm excited to connect with like-minded individuals
+                        and collaborate on exciting projects!</p>
+
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C Programming</span></li>
+                            <li><span>Python (Django)</span></li>
+                            <li><span>Full Stack Web Development</span><br>Web App Development</li>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Android Development</span><br>Building Android/iOS apps</li>
+
+                            <!-- <li><span>C & C++</span></li>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>Python</span></li>
+                            <li><span>Javascript</span></li>
+                            <li><span>Bootstrap</span></li>
+                            <li><span>Django</span></li> -->
+                        </ul>
+                    </div>
+
+                    <!-- Experience -->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - Current</span><br>Intern as a Software Developer at Brinito Services.</li>
+                            <li><span>2023 - 2024</span><br>Intern as an Android Developer at Sunanda Infotech.</li>
+                            <li><span>2022 - 2023</span><br>Industrial Training + Internship at Sumago Infotech.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - Current</span><br>Engineering Student.</li>
+                            <li><span>2020 - 2023</span><br>Diploma in Computer Technology at K.K.Wagh
+                                Polytechnic,Nashik.</li>
+                            <li><span>2010 - 2020</span><br>St.Philomena Convent High School (Secondary Education)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------Services---------------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p style="text-align: justify;">Web development is the art and science of building websites and web
+                        applications. It's a
+                        multifaceted field that combines creative thinking, technical expertise, and problem-solving
+                        skills. </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Designing</h2>
+                    <p style="text-align: justify;">UI/UX design, often combined as one term, focuses on crafting the
+                        user experience (UX) and user
+                        interface (UI) for digital products like websites and applications.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>App Designing</h2>
+                    <p style="text-align: justify;">App designing is the process of creating the look, feel, and
+                        functionality of a mobile application.
+                        It's essentially the bridge between the user and the inner workings of the appplications</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------Portfolio------------------>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/Final-bg/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Final-bg/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Final-bg/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">View more</a>
+        </div>
+    </div>
+
+    <!------------------Contact----------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>yashdgaikwad15@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>9767302572</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <a href="YashResume.pdf" target="blank" download class="btn btn2">Download Resume <i class="fa-solid fa-download"></i></a>
+                </div>
+                <div class="contact-right">
+                    <!-- <form onsubmit="emailSend(); reset(); return false;"> -->
+                    <!-- <form onsubmit="Submit(); reset(); return false;"> -->
+                    <form>
+                        <input type="text" id="name" name="Name" placeholder="Your Name" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" id="mssg" rows="6" placeholder="Type message here"></textarea>
+                        <button type="submit" class="btn btn2" onclick="Submit()">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <span>&#169;</span> Yash Gaikwad. Thank you to visit My
+                Website <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jxKivfJ3OUw?si=wrPE0ilIEmMOVWjT"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jxKivfJ3OUw?si=wrPE0ilIEmMOVWjT"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jxKivfJ3OUw?si=wrPE0ilIEmMOVWjT"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jxKivfJ3OUw?si=wrPE0ilIEmMOVWjT"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <!-- <a href="" class="goTop">
+        <i class="fa fa-angle-up"></i>
+    </a> -->
+
+    <!-- Javascript for Contact Form -->
+    <!-- <script src="Contact.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script> -->
+
+
+    <!-- ------------Javascript------------ -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <!-- ------------Scroll Top----------- -->
+    <script>
+        const scrollTop = document.querySelector("#scrollTop");
+
+        scrollTop.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+    <!-- <script>
+        function Submit(){
+            document.getElementById("msg").innerHTML="Message sent Successfully";
+        }
+        setTimeout(function(){
+            msg.innerHTML=""
+        },5000)
+        form.reset()
+       
+    </script>  -->
+
+
+    <!-- Preloader Script -->
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        }, 10000)
+    </script>
+
+
 </body>
+
 </html>
